@@ -9,11 +9,13 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -35,4 +37,235 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 534px;
+  width: 1170px;
+  gap: 30px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+}
+
+.result__video-container {
+  position: relative;
+  height: 386px;
+  width: 711px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+}
+
+.search-form {
+  margin: 0;
+  width: 711px;
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__fieldset-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+
+.search-form__label {
+  display: flex;
+  gap: 5px;
+  width: fit-content;
+}
+
+.search-form__label-text {
+  appearance: none;
+
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-color: black;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.search-form__checkbox[type="checkbox"]:checked
+  + .search-form__pseudo-checkbox {
+  background-color: white;
+  background-clip: content-box;
+  padding: 1px;
+}
+
+.search-form__textfield {
+  appearance: none;
+  width: 225px;
+  background-color: transparent;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+  font-family: "Fira Sans Condensed";
+  border: none;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.button {
+  background-color: transparent;
+  color: white;
+  font-family: inherit;
+  padding: 6px 73px 6px 73px;
+  border: 1px solid white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  cursor: pointer;
+}
+
+.content__details {
+  display: grid;
+  gap: 26px;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-family: Oswald;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 70.5px;
+}
+
+.content__accent {
+  color: gray;
+  opacity: 50%;
+}
+
+.content__list {
+  position: relative;
+  height: 298px;
+  overflow: auto;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.content__card-link {
+  color: white;
+  text-decoration: none;
+}
+
+.content__video-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+}
+
+.more-button {
+  width: 100%;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
+}
+
+.search-form__textfield:focus-visible{
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.search-form__label:focus{
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.button:active {
+  background-color: gray;
+  opacity: 70%;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.content__video-card-title:hover {
+  text-decoration: underline;
+}
+
+.content__video-card-description-container:active {
+  background-color: grey;
+  opacity: 70%;
+}
+
+.content__card-link:focus{
+  outline: none;
+}
+
+.content__list-item:has(:focus-visible){
+  outline: 1px solid white;
+  outline-offset: 1px;
 }
